@@ -1,0 +1,18 @@
+%div.row
+  %div.col-md-4
+    = f.input :given_name, required: true, input_html: { required: true }
+  %div.col-md-4.col-md-offset-1
+    = f.input :family_name, required: true, input_html: { required: true }
+%div.row
+  %div.col-md-4
+    = f.input :position_title
+  %div.col-md-4.col-md-offset-1
+    = f.input :email_address
+%div.row
+  %div.col-md-3
+    = f.input :primary_phone
+  %div.col-md-3.col-md-offset-1
+    = f.input :home_phone
+  %div.col-md-3.col-md-offset-1
+    = f.input :mobile_phone
+= f.submit 'Save Contact', class: 'btn btn-primary', html: { disable_with: 'Saving..' }

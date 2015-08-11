@@ -1,0 +1,22 @@
+%h3 Saasu CRM (demo app for saasu2 gem)
+
+%table.table
+  %thead
+    %th First Name
+    %th Last Name
+    %th Phone
+    %th Email
+    %th
+  %tbody
+  - @contacts.each do |contact|
+    %tr
+      %td= contact.given_name
+      %td= contact.family_name
+      %td= contact.primary_phone
+      %td= contact.email_address
+      %td
+        = link_to 'Edit', edit_contact_path(contact.id)
+        = link_to 'Delete', contact_path(id: contact.id), method: :delete, data: { confirm: 'Are you sure you want to delete this contact?' }
+
+= link_to 'New Contact', new_contact_path, class: 'btn btn-primary'
+

@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+
+development:
+  <<: *default
+  database: saasu_dev
+
+test:
+  <<: *default
+  database: saasu_test
+
+production:
+  <<: *default
+  database: saasu_production

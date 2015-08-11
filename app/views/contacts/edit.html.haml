@@ -1,0 +1,3 @@
+%h3 Edit Contact - #{@contact.given_name} #{@contact.family_name}
+= simple_form_for :contact, url: contact_path(@contact.id), method: :patch, html: { class: 'form-horizontal', role: 'form', data_toggle: 'validator' } do |f|
+  = render 'form', f: f
